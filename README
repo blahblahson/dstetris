@@ -1,0 +1,69 @@
+dstetris-1.0.0
+______________
+
+So here's my Tetris for DS which is completely free (see COPYING). It is also
+free from all the stupid stuff Nintendo ruined Tetris DS with:
+    - Just because it has two screens doesn't mean the other screen needs to be
+      distracting.
+    - Storing blocks is stupid (L on Standard mode), if you use it you suck.
+    - Previews of 35235138 blocks is stupid, too.
+    - The music sucks until you get 200 lines.
+    - You can't switch off any of these annoying features.
+
+I wrote dstetris for myself so I didn't need to keep up with all the
+aforementioned crap. It has all the features as the Standard mode in Tetris DS,
+is SRS (Super Rotation System) compliant and also fixes some of the annoying
+things in Tetris DS which are more subtle (namely gravity being calculated
+before movement on 20G
+[http://www.tetrisconcept.com/wiki/index.php?title=SRS#20G]).
+
+However, dstetris sacrifices fancy effects, aesthetics and good menu-interfaces
+because it is more to the point, and I find that better. If you want all the
+sugar coated crap Nintendo ships on Tetris DS, then I suggest you buy it.
+Although it is annoying, it's a very good version of Tetris and definitely
+worth the $5 you could get it for now if you want fancy menus and more features
+(one of the puzzle modes is actually good).
+
+The game itself is straightforward if you know how to play Tetris. If you
+don't, figure it out. The menus suck due to my laziness, but they are perfectly
+functional and not poorly written - if I had spend 2 more minutes making the
+options selectable with the D-pad, it would have turned out to be really badly
+written.
+
+IMPORTANT! The default random seed for dstetris is 7525. Every game it will
+change, but by the same extent. In effect, it means every person will have the
+exact same order of blocks when they run the precompiled executable with no
+modifications. When you first run the game, go to configuration -> random seed
+and set it to something random which it isn't at the moment. This will ensure
+that your order of blocks is different from the order that comes to start with.
+Every time a block is generated, it also generates a new random seed, so you
+should only have to set it once. DO NOT change the random seed in confgen
+unless you have good reason to - it's a waste of your time and can only cause
+problems. For more information on configuration, see config-options.
+
+You can contact me via email or IRC:
+<alvin@pqrs.dk> 
+bps` @ efnet
+______________
+
+dstetris - generic, bland Tetris for Nintendo DS
+Copyright (c) 2008  Alvin Šipraga
+
+This program is free software; you can redistribute it and/or modify
+it under the terms of the GNU General Public License as published by
+the Free Software Foundation; either version 2 of the License, or
+(at your option) any later version.
+
+This program is distributed in the hope that it will be useful,
+but WITHOUT ANY WARRANTY; without even the implied warranty of
+MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+GNU General Public License for more details.
+
+You should have received a copy of the GNU General Public License along
+with this program; if not, write to the Free Software Foundation, Inc.,
+51 Franklin Street, Fifth Floor, Boston, MA 02110-1301 USA.
+______________
+
+Tetris (c) 1985~2008 Elorg, a Tetris Holding Company
+Game Design by Alexey Pajitnov
+dstetris is not licensed or endorsed by the Tetris Company

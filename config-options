@@ -1,0 +1,78 @@
+dstetris is very configurable in comparison to other versions if Tetris such as
+Tetris DS. If controls feel incorrect, you can usually refine them in the
+configuration menu. Press START on the main screen and follow the menus to set
+various options. Below is a description of every option with rationale,
+suggestions and such for some.
+__________
+
+* Level
+    - Limit: 1-20
+
+      The level defines how quickly the blocks fall. 1 is the slowest (and
+    I have been told is too slow even by people who suck at Tetris), while 20
+    is instant-flooring (that is, appearing at the bottom on spawn).
+      Internally level is measured in how many 1/60th seconds pass until the
+    block moves down by 1 on the y axis. Specifically, with the exception of
+    level 20, it is calculated as [5(20-level)], and 20 being handled slightly
+    differently to the rest. That means level 1 is 5(19), or 95 1/60th seconds.
+__________
+
+* Level Increment
+    - Limit: 1-100
+    - Unit:  lines
+
+      Part of the challenge in Tetris is keeping up with the increasing level.
+    The level increment defines how many lines must be cleared to afvance a
+    level. Levels do not advance past 20. On Tetris DS, this option is 10,
+    which is a good number.
+__________
+
+* Infinity
+    - Limit: 0-600
+
+      `Infinity' is the name given by the Tetris Company for the delay until
+    blocks lock. dstetris measures this in 1/60th seconds, and the delay is
+    activated when the block is floored and has ceased to move. Moving the
+    block (either with D-pad or with rotation, provided it actually moves)
+    resets this delay. 20 is a somewhat normal delay, but it can be set to
+    anything from 0 to 600, 600 being somewhat unplayable (I just set 600 as a
+    logical maximum). 0 will lock it as soon as it connects with the floor.
+__________
+
+* Delayed Auto Shift (DAS)
+    - Limit: 0-600
+
+      Delayed auto shift is the delay between holding down a direction and the
+    block actually moving. A single press moves the block 1 space in the given
+    direction, followed by this delay, and then it moves at the shift speed
+    while the direction is held. The delay is measured in 1/60th seconds also,
+    with 0 being an instant transformation (0 will give you some trouble when
+    moving the block by 1 space only). 600 is far too much, just like 600
+    infinity.
+__________
+
+* Shift speed
+    - Limit: 1-512
+
+      Shift speed is the speed at which a block moves when held (after the DAS).
+      It is measured differently from most other options. Since the DS sucks at
+    floating point, I use `fixed point' values to define non-integer values.
+    Since the shift speed is often a non-integer, it is measured like this.
+    Without going into the details, consider that 256 equates to one pixel of
+    movement. Similarly, 512 is 2, and 128 0.5.
+__________
+
+* Random seed
+    - Limit: 0-inf
+
+      The limit is actually that of an unsigend int, but it's much easier to
+    just say infinity (it basically is). This option only really needs to be
+    set once and once only by a normal player, but it must be set in most
+    cases.
+      The random seed is a number which fuels the randomizer, to be precise.
+    The default value, 7816, will always produce the same order of blocks on
+    every system unless you change the seed. Once it is set the game will
+    continue to update the seed itself randomly. Instead of going into detail,
+    just hold down L or R on this menu for a while until you get a number which
+    seems adequate. That should be enough normally and you will never need to
+    do it again unless under special circumstances.

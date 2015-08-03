@@ -1,0 +1,7 @@
+I did:
+    * implemented png->raw, wrote text print stuff
+
+I need to:
+    * convert image loads/blits to libnds (raws are built-in)
+    * and change all text stuff from ulib prints to dsprintf prints
+    * .. and change excess ulib calls to libnds (like input)... cat|grep all the files for `ul'

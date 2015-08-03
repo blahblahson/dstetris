@@ -1,0 +1,33 @@
+Running
+_________
+
+To run this you will need a device which allows you to play homebrew stuff on
+your DS - a SLOT-1 or SLOT-2 card of some kind is fine. Put the respective
+binary (ending in .ds.gba, .nds or .sc.nds) on the device and launch it how you
+would other homebrew or official game ROMs. If you want to get one of these
+devices, I suggest an R4 or M3 (they're basically the same thing, but the R4 is
+slightly cheaper).
+
+The binaries are located in dist/.
+
+Compiling
+_________
+
+To compile, run make. This will compile dstetris, along with aslib (found in
+src/aslib and src/arm7). You should have a devkitARM environment set up. Required libraries are libnds
+and uLibrary. $DEVKITPRO should point to your devkitpro root (e.g.
+/opt/devkitpro), and $DEVKITARM should point to your devkitARM root (e.g.
+/opt/devkitpro/devkitARM). It won't work without these set.
+
+For those who don't have devkitARM environments or don't need to compile it
+themselves (there is very little reason to), I have included pre-build Nintendo
+DS binaries:
+    dstetris.ds.gba
+    dstetris.nds
+    dstetris.sc.nds
+
+The only real reason to compile right now (other than changing the code) is to
+change the square graphic (data/square.png), since I have it compiled-in for
+now. This should be selectable without recompilation in future. If you change
+the graphic, make sure it is grey-ish, since dstetris tints the color
+accordingly (notice there is only one graphic and various colors).
